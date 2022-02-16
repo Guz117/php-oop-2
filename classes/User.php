@@ -13,7 +13,7 @@ class User
     {
         $this->name = $name;
         $this->last_name = $last_name;
-        $this->eta = $eta;
+        $this->setEta($eta);
         $this->mail = $mail;
         $this->setCard($card);
     }
@@ -73,6 +73,9 @@ class User
      */
     public function setEta($eta)
     {
+        if (!is_int($eta)) {
+            throw new Exception('Is not a number');
+        }
         $this->eta = $eta;
 
         return $this;
