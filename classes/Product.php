@@ -9,11 +9,10 @@ class Product
     protected $description;
     protected $category;
 
-    public function  __construct($name, $price, $image, $category)
+    public function  __construct($name, $price, $category)
     {
         $this->name = $name;
         $this->price = $price;
-        $this->image = $image;
         $this->category = $category;
     }
 

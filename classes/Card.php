@@ -1,7 +1,7 @@
 <?php
 
 
-class Card
+class Card extends User
 {
     protected $name_user;
     protected $number;
@@ -9,13 +9,12 @@ class Card
     protected $expiration_date;
     protected $circuit;
 
-    public function  __construct($name_user, $number, $cvv, $expiration_date, $circuit)
+    public function  __construct($name_user, $number, $cvv, $expiration_date)
     {
         $this->name_user = $name_user;
         $this->number = $number;
         $this->cvv = $cvv;
         $this->expiratin_date = $expiration_date;
-        $this->circuit = $circuit;
     }
 
     /**
